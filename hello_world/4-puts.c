@@ -1,7 +1,7 @@
 #include <stdio.h>
-int main () 
+int main(void) 
 {
-	puts ("\"Programmings like Building multilingual puzzle");
+	puts("\"Programmings like Building a multilingual puzzle");
 	getchar();
 	return(0);
 }
