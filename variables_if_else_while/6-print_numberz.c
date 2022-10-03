@@ -11,7 +11,7 @@ char n = '\n';
 int i = 0;
 while (i <= 9)
 {
-putchar((char)i % 10 + '0');
+putchar(i % 10 + '0');
 i++;
 }
 putchar(n);
