@@ -11,7 +11,10 @@ int i = 0;
 while (i <= 9)
 {
 putchar(i % 10 + '0');
+if (i <= 8)
+{
 putchar(44);
+}
 putchar(32);
 i++;
 }
