@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include "unistd.h"
 /**
  * main - Entry point
  *
@@ -7,7 +8,7 @@
  */
 int main(void)
 {
-	char c = '_putchar' ;
+	int c = '_putchar' ;
 
 	while (c)
 	{
