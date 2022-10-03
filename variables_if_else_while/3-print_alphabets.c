@@ -23,8 +23,7 @@ while (ch > 'z' && cha <= 'Z')
 putchar(cha);
 cha++;
 }
-putchar(n);
 }
-
+putchar(n);
 return (0);
 }
