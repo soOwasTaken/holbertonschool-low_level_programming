@@ -6,8 +6,9 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main(void) 
 {
-_printchar();
-return (0);
+printf("\_printchar\n");
+return 0;
 }
+
