@@ -7,17 +7,13 @@
 
 int main(void)
 {
-char ch = 'a';
 char n = '\n';
+int a = 0;
 
-while (ch <= 'z')
+while (a <=  9)
 {
-if (ch == 'q' || ch == 'e')
-ch++;
-{
-putchar(ch);
-ch++;
-}
+printf("%d", a);
+a++;
 }
 putchar(n);
 return (0);
