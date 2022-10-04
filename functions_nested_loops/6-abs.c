@@ -8,5 +8,5 @@
  */
 int _abs(int n)
 {
-   return (( n >> 31 | 1 ) * n);
+return ((n >> 31 | 1) * n);
 }
