@@ -7,13 +7,22 @@
 
 int main(void)
 {
+char ch = 'a';
+char cha = 'A';
 char n = '\n';
-int a = 0;
 
-while (a <=  9)
+while (ch <= 'z' && cha <= 'Z')
 {
-printf("%d", a);
-a++;
+if (ch <= 'z')
+{
+putchar(ch);
+ch++;
+}
+while (ch > 'z' && cha <= 'Z')
+{
+putchar(cha);
+cha++;
+}
 }
 putchar(n);
 return (0);
