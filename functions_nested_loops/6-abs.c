@@ -2,9 +2,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_sign - call point
+ * _abs - call point
  * @n: is the int checked
- * Return: 1 if positive , 0 if zero , -1 if negative
+ * Return: absolute value
  */
 int _abs(int n)
 {
