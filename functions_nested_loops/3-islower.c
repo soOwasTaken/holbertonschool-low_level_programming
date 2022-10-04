@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * _islower - call point
- *
+ * @c: is the int checked
  * Return: Always 0 (Success)
  */
 int _islower(int c)
