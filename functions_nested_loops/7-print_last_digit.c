@@ -2,11 +2,16 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * _abs - call point
+ * print_last_digit - call point
  * @n: is the int checked
- * Return: absolute value
+ * Return: last digit
  */
 int print_last_digit(int n)
 {
-return (n % 10);
+int a,m;
+a = (n % 10)
+m = '0' + a;
+_putchar(a)
+return (m);
+
 }
