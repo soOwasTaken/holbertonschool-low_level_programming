@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * jack_bauer - call point
- * 
+ *
  * Return: void
  */
 void jack_bauer(void)
