@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
-
-char c = 'a';
-int print_alphabet()
+/**
+ * print_alphabet - call point
+ *
+ * Return: Always 0 (Success)
+ */
+int print_alphabet(void)
 {
+char c = 'a';
 while (c <= 'z')
 {
 _putchar(c);
