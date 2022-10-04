@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <ctype.h>
 #include "main.h"
 /**
  * _islower - call point
@@ -9,7 +8,9 @@
  */
 int _islower(int c)
 {
-c = islower(c);
-return (0);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
 
