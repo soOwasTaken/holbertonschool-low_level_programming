@@ -1,15 +1,11 @@
-int _putchar(char c);
-int print_alphabet(void)
+void print_alphabet(void)
 {
 char ch = 'a';
-char n = '\n';
 
 while (ch <= 'z')
 {
-putchar(ch);
+putchar('\n');
 ch++;
 }
-
-putchar(n);
-return (0);
+return (print_alphabet);
 }
