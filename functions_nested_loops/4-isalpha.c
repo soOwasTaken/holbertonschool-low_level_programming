@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * _islower - call point
+ * _isalpha - call point
  * @c: is the int checked
  * Return: Always 0 (Success)
  */
