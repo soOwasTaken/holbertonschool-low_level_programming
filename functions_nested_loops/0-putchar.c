@@ -6,8 +6,16 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	print_alphabet();
-	return (0);
+	char c = '\_putchar';
+	_putchar('_');
+	_putchar();
+	_putchar(c);
+	_putchar(c);
+	_putchar(c);
+	_putchar(c);
+	_putchar(c);
+	_putchar("\n");
+	return (write(1, &c, 1));
 }
