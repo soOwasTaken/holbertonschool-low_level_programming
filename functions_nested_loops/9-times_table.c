@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * jack_bauer - call point
+ * times_table - call point
  *
  * Return: void
  */
