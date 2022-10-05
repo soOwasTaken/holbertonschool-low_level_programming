@@ -4,11 +4,11 @@
 /**
  * print_to_98 - call point
  * @n: int asked
- * 
+ *
  * Return: every natural numbers until it reach 98
  */
 void print_to_98(int n)
-{	
+{
 	while (n != 98)
 	{
 		printf("%i, ", n);
