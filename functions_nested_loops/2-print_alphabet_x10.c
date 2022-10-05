@@ -2,28 +2,20 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_alphabet - call point
+ * print_alphabet_x10 - call point
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
 int print_alphabet_x10(void)
 {
-int i = 0;
-while (i <= 10)
-{
-print_alphabet();
-i++;
-}
-return(0);
-}
-int print_alphabet(void)
-{
-char c = 'a';
-while (c <= 'z')
-{
-_putchar(c);
-c++;
-}
-_putchar('\n');
-return (0);
+	char c;
+
+	for (i = 0; i < 10; i++)
+	{
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
 }
