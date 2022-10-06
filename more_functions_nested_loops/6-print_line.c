@@ -3,7 +3,7 @@
 #include "main.h"
 /**
 * print_line - call point
-*
+* @n: int required
 * Return: void
 */
 void print_line(int n)
