@@ -2,12 +2,12 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * mul - call point
- * @a: first interger
+ * muprint_numbers - call point
+ * @i: first interger
  * @b: second interger
  * Return: return result
  */
-int mul(int a, int b)
+void print_numbers(void);
 {
 	return (a * b);
 }
