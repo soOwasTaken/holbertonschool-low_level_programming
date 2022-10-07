@@ -10,9 +10,9 @@
 void print_times_table(int n)
 {
 int a, b, c, d, e, f;
-for (a = 0; a < 15; a++)
+for (a = 0; a < n; a++)
 {
-for (b = 0; b < 15; b++)
+for (b = 0; b < n; b++)
 {
 c = a * b;
 d = c / 100;
@@ -38,7 +38,7 @@ putchar('0' + d);
 putchar('0' + e);
 putchar('0' + f);
 }
-if (b < 14)
+if (b < n)
 {
 putchar(',');
 putchar(' ');
