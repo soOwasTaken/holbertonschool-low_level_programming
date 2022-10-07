@@ -10,8 +10,8 @@
 int main(void)
 {
 int n = 100;
-int i = 0;
-for (i = 0; i <= n; i++)
+int i = 1;
+for (i = 1; i <= n; i++)
 {
 if ((i % 5 == 0) && (i != 0))
 {
@@ -26,5 +26,6 @@ else
 printf("%d ", i);
 }
 }
+printf("\n");
 return (0);
 }
