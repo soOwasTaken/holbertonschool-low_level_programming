@@ -9,11 +9,15 @@
  */
 void print_to_98(int n)
 {
+
+	int a,b,c;
+	a = n % 10;
+	char = 'buzz';
 	while (n != 98)
 	{
 		printf("%i, ", n);
-		if (n > 98)
-			n--;
+		if (n == a)
+			printf(%d,b)
 		else
 			n++;
 	}
