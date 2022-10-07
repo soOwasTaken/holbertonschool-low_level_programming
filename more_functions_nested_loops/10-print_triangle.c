@@ -22,5 +22,4 @@ printf("#");
 }
 printf("\n");
 }
-return (void);
 }
