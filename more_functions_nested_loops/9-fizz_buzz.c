@@ -9,7 +9,7 @@
 
 int main(void)
 {
-int n = 100;
+int n = 99;
 int i = 1;
 for (i = 1; i <= n; i++)
 {
@@ -30,6 +30,7 @@ else
 printf("%d ", i);
 }
 }
+printf("Buzz")
 printf("\n");
 return (0);
 }
