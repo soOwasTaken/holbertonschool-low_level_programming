@@ -4,7 +4,7 @@
 /**
  * main - call point
  *
- * Return: FizzBuzz
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -26,5 +26,5 @@ else
 printf("%d ", i);
 }
 }
-return (void);
+return (0);
 }
