@@ -13,13 +13,17 @@ int n = 100;
 int i = 1;
 for (i = 1; i <= n; i++)
 {
-if ((i % 5 == 0) && (i != 0))
+if ((i % 3 == 0) && (i % 5 == 0))
 {
-printf("Buzz ");
+printf("FizzBuzz ");
 }
 else if ((i % 3 == 0) && (i != 0))
 {
 printf("Fizz ");
+}
+else if ((i % 5 == 0) && (i != 0))
+{
+printf("Buzz ");
 }
 else
 {
