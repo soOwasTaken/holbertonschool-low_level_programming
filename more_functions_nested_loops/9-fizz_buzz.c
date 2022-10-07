@@ -26,4 +26,5 @@ else
 printf("%d ", i);
 }
 }
+return (void);
 }
