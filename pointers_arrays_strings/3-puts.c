@@ -9,7 +9,7 @@
 void _puts(char *str)
 {
 char *ptr;
-ptr=str;
+ptr = str;
 while (*ptr != 0)
 	putchar(*ptr++);
 putchar('\n');
