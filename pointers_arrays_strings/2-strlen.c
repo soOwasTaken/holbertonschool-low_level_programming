@@ -4,10 +4,9 @@
 /**
  * _strlen - Entry point
  * @s: pointer a change value
- * Return: 0
+ * Return: *s
  */
 int _strlen(char *s)
 {
 printf("%lu\n", sizeof(*s));
-return (0);
 }
