@@ -8,6 +8,11 @@
  */
 int _strlen(char *s)
 {
-printf("%lu\n", sizeof(s));
-return(int _strlen);
+int l = 0;
+while (*s != 0)
+	{
+	s++;
+	l++;
+	}
+return (l);
 }
