@@ -2,10 +2,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * swap_int - Entry point
- * @a: pointer a change value
- * @b: pointer b change value
- * Return: void
+ * _strlen - Entry point
+ * @s: pointer a change value
+ * Return: int
  */
 int _strlen(char *s)
 {
