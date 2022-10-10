@@ -9,6 +9,5 @@
  */
 int _strlen(char *s)
 {
-char *s;
 printf("%lu\n",sizeof(char *s));
 }
