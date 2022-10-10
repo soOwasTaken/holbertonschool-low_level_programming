@@ -12,4 +12,5 @@ char *ptr;
 ptr=str;
 while (*ptr != 0)
 	putchar(*ptr++);
+putchar('/n')
 }
