@@ -2,12 +2,13 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * reset_to_98 - Entry point
+ * @n: pointer value changed
+ * Return: void
  */
 void reset_to_98(int *n)
 {
+int *p;
 p = &n;
 *p = 98;
 }
