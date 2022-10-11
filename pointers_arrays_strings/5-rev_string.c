@@ -9,20 +9,13 @@
  */
 void rev_string(char *s)
 {
-char str[10];
-int i, left, right, len;
-int c, d;
-char rev;
-str[10] = "My School";
-char temp;
-len = strlen(str);
-left = 0;
-right = len - 1;
-for (i = left; i < right; i++) {
-	temp = str[i];
-	str[i] = str[right];
-	str[right] = temp;
-	right--;
+int i,j,len;
+i = 0;
+len = strlen(s);
+for (i = 0; i < len / 2; i++) 
+{
+  j = s[i];
+  s[i] = s[len -i -1];
+  s[len -i -1] = j;
 }
-*s = rev;
 }
