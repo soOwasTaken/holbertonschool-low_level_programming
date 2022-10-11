@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
+#include <string.h>
 /**
  * _strcat - Entry point
  * @dest: pointer of destination
