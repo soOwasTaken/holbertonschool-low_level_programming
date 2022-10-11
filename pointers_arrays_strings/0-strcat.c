@@ -7,13 +7,13 @@
  * @src: pointer of source
  * Return: void
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src);
 {
 int i;
-
-	for (i = 0 ; i < src[i] != "\0" ; i++)
+int dest_len = strlen(dest);
+	for (i = 0 ; i < src[i] != '\0' ; i++)
 		dest[dest_len + i] = src[i];
-	dest[dest_len + i] = "\0";
+	dest[dest_len + i] = '0';
 
 	return (dest);
 }
