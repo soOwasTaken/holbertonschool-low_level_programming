@@ -13,8 +13,8 @@ int i = strlen(str) - 1;
 int len = ((strlen(str) / 2));
 int n = ((strlen(str) + 1) / 2);
 for (; len <= i ; len++)
-	if (n % 2 != 0)
-		_putchar(*(str + ++n));
+	if (i % 2 != 0)
+		_putchar(*(str + n++));
 	else 
 		_putchar(*(str + len));
 _putchar('\n');
