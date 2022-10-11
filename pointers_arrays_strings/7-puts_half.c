@@ -3,7 +3,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * puts2 - Entry point
+ * puts_half - Entry point
  * @str: string
  * Return: void
  */
