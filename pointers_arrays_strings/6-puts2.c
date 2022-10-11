@@ -3,15 +3,15 @@
 #include <string.h>
 #include "main.h"
 /**
- * print_rev - Entry point
- * @s: string
+ * puts2 - Entry point
+ * @str: string
  * Return: void
  */
 void puts2(char *str)
 {
 int i = 0;
 
-while (*(str +i) != '\0')
+while (*(str + i) != '\0')
 {
 if (i % 2 == 0)
 	{
