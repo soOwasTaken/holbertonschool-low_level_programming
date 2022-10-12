@@ -6,6 +6,7 @@
  * _strncat - Entry point
  * @dest: pointer of destination
  * @src: pointer of source
+ * @n: int n
  * Return: void
  */
 char *_strncat(char *dest, char *src, int n)
