@@ -6,7 +6,7 @@
  * _strspn - Entry point
  * @s: Returns the number of bytes in the initial segment of s
  * @accept: which consist only of bytes from accept
- * Return: s
+ * Return: i
  */
 unsigned int _strspn(char *s, char *accept)
 {
