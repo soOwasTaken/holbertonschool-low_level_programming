@@ -5,6 +5,7 @@
 /**
  * print_diagsums - Entry point
  * @a:  array
+ * @size: size of the 2D array
  * print addition of diagonals
  * Return: void
  */
