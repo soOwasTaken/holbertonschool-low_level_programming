@@ -3,9 +3,9 @@
 #include "main.h"
 #include <string.h>
 /**
- * _puts_recursion - Entry point
- * @s: character to
- * Return: s
+ * _print_rev_recursion - Entry point
+ * @s: string
+ * Return: void
  */
 void _print_rev_recursion(char *s)
 {
