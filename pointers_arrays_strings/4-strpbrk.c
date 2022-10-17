@@ -3,24 +3,21 @@
 #include "main.h"
 #include <string.h>
 /**
- * _strpbrk - Entry point
- * @s:  locates the first occurrence in the string
- * @accept: of any of the bytes in the string
- * Return: void
+ * _strstr - Entry point
+ * @needle:  finds the first occurrence of needle
+ * @haystack:  in the string haystack
+ * The terminating null bytes (\0) are not compared
+ * Return: p || NULL
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
-
-	for (i = 0; s[i]; i++)
-	{
-		for (j = 0; accept[j]; j++)
-		{
-			if (s[i] == accept[j])
-				break;
-		}
-		if (accept[j])
-			return (s + i);
-	}
-	return (0);
+    while (*haystack != '\0')
+    {
+        if ((*haystack == *needle) && compare(haystack, needle)) {
+            return (haystack);
+        }
+        haystack++;
+    }
+ 
+    return (NULL);
 }

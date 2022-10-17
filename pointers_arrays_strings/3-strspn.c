@@ -8,7 +8,7 @@
  * @accept: which consist only of bytes from accept
  * Return: i
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
 

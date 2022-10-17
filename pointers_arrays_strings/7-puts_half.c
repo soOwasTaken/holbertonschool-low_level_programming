@@ -3,11 +3,11 @@
 #include <string.h>
 #include "main.h"
 /**
- * puts_half - Entry point
+ * leet - Entry point
  * @str: string
  * Return: void
  */
-void puts_half(char *str)
+void leet(char *str)
 {
 	int j, i = 0;
 
