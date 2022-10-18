@@ -5,12 +5,6 @@
  * @j: i / 2
  * Return: 1 or 0
  */
-/**
- * check_prime -  check if i is a prime
- * @i: int n of is_prime_number
- * @j: i / 2
- * Return: 1 or 0
- */
 int check_prime(int i, int j)
 {
 	if (j == 1)
