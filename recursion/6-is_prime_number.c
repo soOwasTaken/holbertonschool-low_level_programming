@@ -11,7 +11,8 @@
  * @j: i / 2
  * Return: 1 or 0
  */
-int check_prime(int i, int j) {
+int check_prime(int i, int j) 
+{
 	if (j == 1)
 		return (1);
 	if (i % j == 0)
@@ -25,7 +26,8 @@ int check_prime(int i, int j) {
  * Return: 0 or 1
  */
 
-int is_prime_number(int n) {
+int is_prime_number(int n) 
+{
 	int check;
 
 	if (n / 2 > 0)
