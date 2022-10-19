@@ -6,7 +6,7 @@
  * @argv: argv
  * Return: 1 if c is upper, 0 if he isn't
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int i;
 
