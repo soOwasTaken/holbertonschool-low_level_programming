@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	{
 	if (argc != 3)
 	{
-		rintf("%s \n", "Error");
-	return (1);
+		printf("%s \n", "Error");
+		return (1);
 	}
 	else
 		r = ((atoi(argv[1])) * (atoi(argv[2])));
