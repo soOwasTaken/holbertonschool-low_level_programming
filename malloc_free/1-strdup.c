@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	char *dup_offset;
 
 	/* Allocate memory for duplicate */
-	org_size = strlen(org);
+	str_size = strlen(org);
 	dup = (char *)malloc(sizeof(char)*str_size+1);
 	if( dup == NULL)
 		return( (char *)NULL);
