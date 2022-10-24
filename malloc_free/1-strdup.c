@@ -10,25 +10,17 @@
  */
 char *_strdup(char *str)
 {
-	int str_size;
-	static char *dup;
-	char *dup_offset;
+	char *dup = NULL;
+	int a, len;
 
-	/* Allocate memory for duplicate */
-	str_size = strlen(str);
-	dup = (char *)malloc(sizeof(char)*str_size+1);
-	if( dup == NULL)
-		return( (char *)NULL);
+	if (!str)
+		return (NULL);
 
-	/* Copy string */
-	dup_offset = dup;
-	while(*str)
-	{
-		*dup_offset = *str;
-		dup_offset++;
-		str++;
-	}
-	*dup_offset = '\0';
+	len = strlen(str);
+	dup = malloc(len + 1);
+
+	for(a = 0; str[a] != '\0'; a++)
+		dup[a] = str[a];
 
 	return(dup);
 }
