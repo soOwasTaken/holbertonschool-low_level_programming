@@ -1,31 +1,39 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
 #include "main.h"
+ 
 /**
- * *str_concat - Entry point
- *@s1: string1
- *@s2: string2
- * Return: new_str
+ * str_concat - concatenates two strings
+ *
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: a pointer to newly allocated space in memory containing
+ * the contents of s1 followed by s2 and '\0', else returns NULL
+ *
  */
+ 
 char *str_concat(char *s1, char *s2)
 {
-	int s1_len, s2_len;
-	char *new_str;
-
-	s1_len = strlen(s1);
-	s2_len = strlen(s2);
+	int len, l1, l2;  /* declarations */
+	char *ptr;
+ 
 	if ((s1 == NULL) && (s2 != NULL))
 		s1 = "";
 	if ((s1 != NULL) && (s2 == NULL))
 		s2 = "";
 	if ((s1 == NULL) && (s2 == NULL))
 		s1 = s2 = "";
-	new_str = malloc(s1_len + s2_len + 1);
-	if (new_str == NULL)
+ 
+	l1 = strlen(s1);               /* innitializations of declarations */
+	l2 = strlen(s2);
+	len = l1 + l2 + 1;
+ 
+	ptr = malloc(len);
+ 
+	if (ptr == NULL)
 		return (NULL);
-	memcpy(new_str, s1, s1_len);
-	strcat(new_str, s2);
-	return (new_str);
+	memcpy(ptr, s1, l1 + 1);   /* set ptr with content of s1 */
+	strcat(ptr, s2);  /*only now we concat s1 and s2 with ptr the new s1*/
+ 
+	return (ptr);
+	free(ptr);
 }
