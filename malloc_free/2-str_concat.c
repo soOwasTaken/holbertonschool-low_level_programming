@@ -20,10 +20,8 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL && s1 != NULL)
 		s2 = "";
-	if (s1 && s2 == NULL)
+	if (new_str == NULL)
 		return (NULL);
-	if (s1 && s2 != NULL)
-		new_str = malloc(s1_len + s2_len + 1);
 	memcpy(new_str, s1, s1_len);
 	memcpy(new_str + s1_len, s2, s2_len + 1);
 	return (new_str);
