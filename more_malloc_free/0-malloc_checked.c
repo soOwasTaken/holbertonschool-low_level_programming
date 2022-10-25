@@ -10,10 +10,10 @@
  */
 void *malloc_checked(unsigned int b)
 {
-int *ptr ;
+	int *ptr;
 
-ptr = (int *)malloc(b * sizeof(int));
-if (ptr == NULL)
-    exit(98);
-exit(0);
+	ptr = (int *)malloc(b * sizeof(unsigned int));
+	if (ptr == NULL)
+		exit(98);
+	exit(0);
 }
