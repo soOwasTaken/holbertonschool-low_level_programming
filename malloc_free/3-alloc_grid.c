@@ -9,7 +9,7 @@
  *@s2: string2
  * Return: new_str
  */
-char *alloc_grid(int width, int height)
+char **alloc_grid(int width, int height)
 {
 	int i;
 	int **ptr;
