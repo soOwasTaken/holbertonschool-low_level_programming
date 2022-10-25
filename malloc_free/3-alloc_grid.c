@@ -9,7 +9,7 @@
  *@s2: string2
  * Return: new_str
  */
-char **alloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int i;
 	int **ptr;
@@ -21,6 +21,7 @@ char **alloc_grid(int width, int height)
 	ptr = malloc(sizeof(int) * height);
 	if (ptr == NULL)
 		return(NULL);
+
 	i = 0;
 	while (i < height)
 	{
@@ -29,5 +30,5 @@ char **alloc_grid(int width, int height)
 			return (NULL);
 		i++;
 	}
-	return(ptr);
+	return (ptr);
 }
