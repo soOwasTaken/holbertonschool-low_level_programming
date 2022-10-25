@@ -6,7 +6,7 @@
 /**
  * *malloc_checked - Entry point
  *@b: integer b
- * Return: exit
+ * Return: a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
@@ -16,4 +16,5 @@ void *malloc_checked(unsigned int b)
 	if (ptr == NULL)
 		exit(98);
 	exit(0);
+    return(ptr)
 }
