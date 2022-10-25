@@ -21,14 +21,11 @@ char *str_concat(char *s1, char *s2)
 	if ((s2 == NULL) && (s1 != NULL))
 		s2 = "";
 	if ((s1 == NULL) && (s2 == NULL))
-	{
-		s1 = "";
-		s2 = "";
-	}
+		s1 = s2 = "";
 	new_str = malloc(s1_len + s2_len + 1);
 	if (new_str == NULL)
 		return (NULL);
-	memcpy(new_str, s1, s1_len + 1);
+	memcpy(new_str, s1, s1_len);
 	strcat(new_str, s2);
 	return (new_str);
 }
