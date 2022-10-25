@@ -29,6 +29,6 @@ char *str_concat(char *s1, char *s2)
 	if (new_str == NULL)
 		return (NULL);
 	memcpy(new_str, s1, s1_len);
-	strcat(new_str, s2)
+	strcat(new_str, s2);
 	return (new_str);
 }
