@@ -4,10 +4,10 @@
 #include <string.h>
 #include "main.h"
 /**
- * *str_concat - Entry point
- *@s1: string1
- *@s2: string2
- * Return: new_str
+ * **alloc_grid - Entry point
+ *@width: largeur du tableau
+ *@height: longueur du tableau
+ * Return: ptr
  */
 int **alloc_grid(int width, int height)
 {
@@ -20,13 +20,14 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	ptr = malloc(sizeof(int) * height);
 	if (ptr == NULL)
-		return(NULL);
+		return (NULL);
 
 	i = 0;
 	while (i < height)
 	{
 		ptr[i] = malloc(sizeof(int) * width);
 		if (ptr[i] == NULL)
+			free(ptr);
 			return (NULL);
 		i++;
 	}
