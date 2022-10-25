@@ -12,7 +12,7 @@ void *malloc_checked(unsigned int b)
 {
 int *ptr ;
 
-ptr = (int *)malloc(sizeof(int));
+ptr = (int *)malloc(b * sizeof(int));
 if (ptr == NULL)
     exit(98);
 exit(0);
