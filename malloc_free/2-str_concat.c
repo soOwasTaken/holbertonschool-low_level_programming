@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL && s1 != NULL)
 		new_str = malloc(s1_len+ 1);
 	if (s1 && s2 == NULL)
-		return(NULL)
+		return(NULL);
 	memcpy(new_str, s1, s1_len);
 	memcpy(new_str + s1_len, s2, s2_len + 1);
 	return (new_str);
