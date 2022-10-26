@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if ((s1 == NULL) && (s2 == NULL))
 		s1 = s2 = "";
-	if (n == NULL)
+	if (n == 0)
 		s2 = "";
 	
 	i = n;
