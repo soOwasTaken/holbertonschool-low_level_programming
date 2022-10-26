@@ -28,7 +28,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len, l1, l2, j, i;  /* declarations */
+	int len, l1, l2, i;  /* declarations */
 	char *ptr;
 
 	if ((s1 == NULL) && (s2 != NULL))
