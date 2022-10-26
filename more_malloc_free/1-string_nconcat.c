@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == NULL)
 		return (NULL);
 	memcpy(ptr, s1, l1 + 1);   /* set ptr with content of s1 */
-	strcat(ptr, s2, n);
+	strncat(ptr, s2, n);
 
 	return (ptr);
 	free(ptr);
