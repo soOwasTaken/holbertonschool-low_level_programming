@@ -10,7 +10,6 @@
  *
  * Description: dog description
  */
-#endif /* dog_h */
 struct dog
 {
 	char *name;
