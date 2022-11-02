@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "dog.h"
 /**
  * *new_dog - init struct of dog
@@ -12,41 +10,24 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
-
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
-	{
-		free(new_dog);
+	dog_t *p;
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
 		return (NULL);
-	}
 	if (name == NULL)
 	{
-		free(new_dog);
+		free(p);
+		free(owner);
 		return (NULL);
 	}
-	new_dog->name = malloc(sizeof(char) * (strlen(name) + 1));
-	if (new_dog->name == NULL)
-	{
-		free(new_dog->name);
-		return (NULL);
-	}
-	strcpy(new_dog->name, name);
-
-	new_dog->age = age;
-
 	if (owner == NULL)
 	{
-		free(new_dog->owner);
-		free(new_dog);
+		free(p);
+		free(name);
 		return (NULL);
 	}
-	new_dog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
-	if (new_dog->owner == NULL)
-	{   
-		free(new_dog->owner);
-		return (NULL);
-	}
-	strcpy(new_dog->owner, owner);
-	return (new_dog);
+	p->name = name;
+	p->age = age;
+	p->owner = owner;
+	return (p);
 }
