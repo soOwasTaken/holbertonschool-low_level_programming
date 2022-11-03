@@ -4,22 +4,20 @@
  * print_numbers - Entry point
  *@n: number of parameters
  *@separator: separator used between outputs.
- * Return: printings numbers with separators.
+ * Return: printings numbers with separator between
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
-	int i;
-	unsigned int j;
+	unsigned int i;
 
 	va_start(ap, n);
-	for (i = n, j = 0; j <= n; i = va_arg(ap, int), j++)
-		if (separator != NULL && j <= n - 1)
-		{
-			printf("%d%s", i, separator);
-		}
-		else
-			printf("%d", i);
+	for (i = 0; i < n; i++)
+    {
+        printf("%d", va_arg(ap, int));
+		if (separator != NULL && i != (n - 1))
+			printf("%s",separator);
+    }
 	va_end(ap);
 	putchar('\n');
 }
