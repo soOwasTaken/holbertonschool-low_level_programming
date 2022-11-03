@@ -1,38 +1,37 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - function with two arguments
- * @argc: int type argument count
- * @argv: char type argument array
+ * main - Entry point
+ * @argc: number of command line arguments
+ * @argv: array of size argc
  *
- * Description: print op
- * Return: na
+ * Return: Always 0.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int count;
+	op_t operation;
+	char op = *(argv[2]);
+	int sum;
 
-	count = 0;
-	if (argc != 2)
+	if (argc != 4)
 	{
-		printf("Error\n");
-		exit(1);
+		printf("ERROR\n");
+		exit(98);
 	}
-	if (atoi(argv[1]) < 0)
+	if ((op == '%' || op == '/') && !(atoi(argv[3])))
 	{
-		printf("Error\n");
-		exit(2);
+		printf("ERROR\n");
+		exit(100);
 	}
-	while (count < atoi(argv[1]))
+	operation.f = get_op_func(&op);
+	if (operation.f == NULL)
 	{
-		printf("%02x", *((unsigned char *)main + count));
-		count++;
-		if (atoi(argv[1]) > count)
-		{
-			printf(" ");
-		}
+		printf("ERROR\n");
+		exit(99);
 	}
-	printf("\n");
+	sum = operation.f(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", sum);
 	return (0);
 }
