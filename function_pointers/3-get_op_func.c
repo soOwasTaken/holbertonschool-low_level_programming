@@ -1,11 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "3-calc.h"
+
 /**
- * get_op_func - addition operator
- * @s: operator
+ * get_op_func - function pointer
+ * @s: char type string
  *
- * Return: return to the good
+ * Description: struction with operators
+ * Return: pointer to operator and function
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -19,11 +21,14 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (*(ops[i].op) == *s)
+	while (ops[i].op)
 	{
-		if (*(ops[i].op) == *s)
+		if (*s == *ops[i].op)
+		{
 			return (ops[i].f);
+		}
 		i++;
 	}
-	return (NULL);
+	printf("Error\n");
+	exit(99);
 }
