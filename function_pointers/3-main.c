@@ -1,31 +1,78 @@
-#include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "3-calc.h"
 
-
-int main(int argc, char *argv[])
+/**
+ * op_add - function with two arguments
+ * @a: int type
+ * @b: int type
+ *
+ * Description: add two input
+ * Return: value
+ */
+int op_add(int a, int b)
 {
-    op_t operation;
-    char op = *(argv[2]);
-    int sum;
+	return (a + b);
+}
 
-    if (argc != 4)
-    {
-        printf("Error\n");
-        exit(98);
-    }
-    if ((op == '%' || op == '/') && !(atoi(argv[3])))
-    {
-        printf("Error\n");
-        exit(100);
-    }
-    operation.f = get_op_func(&op);
-    if (operation.f == NULL || argv[2][1] != '\0')
-    {
-        printf("Error\n");
-        exit(99);
-    }
-    sum = operation.f(atoi(argv[1]), atoi(argv[3]));
-    printf("%d\n",sum);
-    return (0);
+/**
+ * op_sub - function with two arguments
+ * @a: int type
+ * @b: int type
+ *
+ * Description: subtract two input
+ * Return: value
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - function with two arguments
+ * @a: int type
+ * @b: int type
+ *
+ * Description: multiply two input
+ * Return: value
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - function with two arguments
+ * @a: int type
+ * @b: int type
+ *
+ * Description: divide two input
+ * Return: value
+ */
+int op_div(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a / b);
+}
+
+/**
+ * op_mod - function with two arguments
+ * @a: int type
+ * @b: int type
+ *
+ * Description: mod two input
+ * Return: value
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
