@@ -1,78 +1,38 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "3-calc.h"
+#include <stdlib.h>
 
 /**
- * op_add - function with two arguments
- * @a: int type
- * @b: int type
+ * main - function with two arguments
+ * @argc: int type argument count
+ * @argv: char type argument array
  *
- * Description: add two input
- * Return: value
+ * Description: print op
+ * Return: na
  */
-int op_add(int a, int b)
+int main(int argc, char **argv)
 {
-	return (a + b);
-}
+	int count;
 
-/**
- * op_sub - function with two arguments
- * @a: int type
- * @b: int type
- *
- * Description: subtract two input
- * Return: value
- */
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-
-/**
- * op_mul - function with two arguments
- * @a: int type
- * @b: int type
- *
- * Description: multiply two input
- * Return: value
- */
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
-
-/**
- * op_div - function with two arguments
- * @a: int type
- * @b: int type
- *
- * Description: divide two input
- * Return: value
- */
-int op_div(int a, int b)
-{
-	if (b == 0)
+	count = 0;
+	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(1);
 	}
-	return (a / b);
-}
-
-/**
- * op_mod - function with two arguments
- * @a: int type
- * @b: int type
- *
- * Description: mod two input
- * Return: value
- */
-int op_mod(int a, int b)
-{
-	if (b == 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(2);
 	}
-	return (a % b);
+	while (count < atoi(argv[1]))
+	{
+		printf("%02x", *((unsigned char *)main + count));
+		count++;
+		if (atoi(argv[1]) > count)
+		{
+			printf(" ");
+		}
+	}
+	printf("\n");
+	return (0);
 }
