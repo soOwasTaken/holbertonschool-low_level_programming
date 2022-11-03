@@ -4,13 +4,12 @@
 /**
  * get_op_func - addition operator
  * @s: operator
- * 
- * Return: return to the good 
+ *
+ * Return: return to the good
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] =
-	{
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -19,11 +18,12 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i = 0;
+
 	while (*(ops[i].op) == *s)
 	{
 		if (*(ops[i].op) == *s)
-			return(ops[i].f);
+			return (ops[i].f);
 		i++;
 	}
-    return (NULL);
+	return (NULL);
 }

@@ -39,21 +39,25 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-    if (b == 0)
-        printf("Error\n");
-        exit(100);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	return (a / b);
 }
 /**
- * op_div - addition operator
+ * op_mod - addition operator
  * @a: first int
  * @b: second int
  * Return: returns the remainder of the division of a by b
  */
 int op_mod(int a, int b)
 {
-    if (b == 0)
-        printf("Error\n");
-        exit(100);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	return (a % b);
 }
