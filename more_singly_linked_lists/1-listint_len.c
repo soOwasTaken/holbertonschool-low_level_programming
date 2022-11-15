@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - call point
+ * listint_len - call point
  * @h: head of node
  * Return: elements of node
  */
