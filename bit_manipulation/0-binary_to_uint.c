@@ -9,11 +9,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int val = 0;
 	int i = 0;
-	int size = strlen(b);
+	int size;
 
 	if (b == NULL)
 		return (0);
-	
+
+	size = strlen(b);
 
 	while (i < size)
 	{	/* Found another digit.*/
@@ -24,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 			i++;
 		}
 		else
-			return(0);
+			return (0);
 	}
 	return (val);
 }
