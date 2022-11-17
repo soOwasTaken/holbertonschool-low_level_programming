@@ -13,11 +13,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int i;
 	if (index == 0)
 	{
-		printf("\nElement deleted is : %d\n", temp->n);
 		(*head) = (*head)->next; /* Advancing the head pointer */
 		temp->next = NULL;
 		free(temp); /* Node is deleted */
-		return(1);
 	}
 	else 
 	{
@@ -28,5 +26,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(del); /* Node is deleted */
 		return(1);
 	}
-	return(-1);
+	return(0);
 }
