@@ -22,17 +22,17 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		temp->next = NULL;
 		free(temp); /* Node is deleted */
 	}
-	else 
+	else
 	{
-		for (i = 0; i < index - 1; i++) 
+		for (i = 0; i < index - 1; i++)
 		{
 			temp = temp->next;
 			if (temp == NULL)
-				return(-1);
+				return (-1);
 		}
 		temp->next = temp->next->next;
 		del->next = NULL;
 		free(del); /* Node is deleted */
 	}
-	return(1);
+	return (1);
 }
