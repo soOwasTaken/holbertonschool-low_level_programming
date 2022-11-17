@@ -8,14 +8,14 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp = *head;
-	listint_t *del= temp->next;/* del pointer points to the node */
+	listint_t *temp;
+	listint_t *del;/* del pointer points to the node */
 	unsigned int i;
 
-	if (*head == NULL && index == '0')
-		return(-1);
-	if ((*head) == NULL || head == NULL)
-		return(-1);
+	if (!head || !*head)
+		return (-1);
+	temp = *head;
+	del = temp->next;
 	if (index == 0)
 	{
 		*head = (*head)->next; /* Advancing the head pointer */
