@@ -19,7 +19,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		*head = (*head)->next; /* Advancing the head pointer */
 		free(del); /* Node is deleted */
-		return(1);
+		return (1);
 	}
 	else
 	{
