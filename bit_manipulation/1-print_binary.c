@@ -7,26 +7,26 @@
  */
 void print_binary(unsigned long int n)
 {
-	int temp, k;
-	int i = 0;
+	long int i = 0, size;
+	unsigned long int y, k;
 
-	temp = n;
-
-	while (temp != 0)
+	if (n == 0)
+		printf("0");
+	y = n;
+	while (y != '\0')
 	{
 		i++;
-		temp = temp >> 1;
+		y = y >> 1;
 	}
-	if (i == 0)
-		_putchar('0');
 
-	for (i = i - 1; i >= 0; i--)
+	for (size = i - 1; size >= 0; size--)
 	{
-		k = (n >> i);
+		k = n >> size;
+
 		if (k & 1)
-			_putchar('1');
+			printf("1");
 		else
-			_putchar('0');
+			printf("0");
 	}
 }
 
