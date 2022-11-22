@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_list - call point
+ * free_dlistint - call point
  * @head: head of node
  * Return: return success
  */
@@ -13,8 +13,7 @@ void free_dlistint(dlistint_t *head)
 	{
 		temp = temp->next;
 		temp->prev = NULL;
-		free(head->n);
-		free(head);
+		free(head); 
 		head = temp;
 	}
 }
