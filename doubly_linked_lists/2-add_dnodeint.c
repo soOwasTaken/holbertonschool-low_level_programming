@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - call point
+ * add_dnodeint - call point
  * @h: head of node
  * @str: str added node
  * Return: adress of node
