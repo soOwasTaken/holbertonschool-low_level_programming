@@ -2,8 +2,8 @@
 
 /**
  * add_dnodeint - call point
- * @h: head of node
- * @str: str added node
+ * @head: head of node
+ * @n: n value of the node
  * Return: adress of node
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -20,5 +20,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if ((*head) != NULL)
 		(*head)->prev = new_node;
 	(*head) = new_node;
-	return(*head);
+	return (*head);
 }
