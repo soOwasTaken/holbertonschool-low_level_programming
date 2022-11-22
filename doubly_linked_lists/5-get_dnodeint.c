@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - call point
+ * get_dnodeint_at_index - call point
  * @head: pointer to pointer to head of node
  * @index: index
  * Return: return success
