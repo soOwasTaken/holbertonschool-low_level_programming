@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - call point
- * @head: pointer to pointer to head of node
+ * insert_dnodeint_at_index - call point
+ * @h: pointer to pointer to head of node
  * @idx: index
  * @n: data to add to the node
  * Return: return success
@@ -26,7 +26,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new_node;
 		return (new_node);
 	}
-
 	for (i = 0; i < idx - 1; i++)
 	{
 		temp = temp->next;
@@ -34,6 +33,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 	}
 	new_node->next = temp->next;
+	if (temp->next != NULL)
+		new_node->next->prev = new_node;
 	temp->next = new_node;
+	new_node->prev = temp;
 	return (new_node);
 }
