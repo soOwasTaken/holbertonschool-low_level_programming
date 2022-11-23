@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - call point
+ * delete_dnodeint_at_index - call point
  * @head: pointer to pointer to head of node
  * @index: index
  * Return: return success
@@ -18,6 +18,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		*head = (*head)->next; /* Advancing the head pointer */
+		*head->prev = NULL;
 		free(del); /* Node is deleted */
 		return (1);
 	}
