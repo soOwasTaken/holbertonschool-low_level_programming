@@ -8,32 +8,30 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
-	dlistint_t *del;/* del pointer points to the node */
-	unsigned int i;
+	dlistint_t *temp = *head;
 
-	if (!head || !*head)
+	if (!head)
 		return (-1);
-	del = *head;
-	if (index == 0)
+	if (head)
 	{
-		*head = (*head)->next; /* Advancing the head pointer */
-		(*head)->prev = NULL;
-		free(del); /* Node is deleted */
-		return (1);
-	}
-	else
-	{
-		for (i = 0; i < index - 1; i++)
+		while (index && temp)
 		{
-		if (del->next == NULL)
+			temp = temp->next;
+			index--;
+		}
+		if (index)
 			return (-1);
-		del = del->next;
+		if (!index && temp)
+		{
+			if (temp->next)
+				temp->next->prev = temp->prev;
+			if (temp->prev)
+				temp->prev->next = temp->next;
+			else
+				*head = temp->next;
+			free(temp);
+			return (1);
 		}
 	}
-	temp = del->next;
-	del->next = temp->next;
-	del->prev = temp->prev->next;
-	free(temp); /* Node is deleted */
-	return (1);
+	return (-1);
 }
