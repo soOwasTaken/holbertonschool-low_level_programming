@@ -1,11 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - retrieves a value associated with a key
+ * hash_table_get - get key associated with index
  * @ht: hash table
  * @key: key
- *
- * Return: value associated with the key, or NULL
+ * Return: index value of key or NULL
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
